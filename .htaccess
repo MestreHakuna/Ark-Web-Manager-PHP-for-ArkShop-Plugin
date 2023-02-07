@@ -1,0 +1,6 @@
+SetEnvIfNoCase User-Agent "^Wget" wget_aqui_nao
+<Limit GET POST>
+   Order Allow,Deny
+   Allow from all
+   Deny from env=wget_aqui_nao
+</Limit> 
